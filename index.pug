@@ -1,0 +1,55 @@
+mixin news(link,name)
+          div(class="news-card")
+            img(src=link, alt="news image")
+            div(class="news_text-container")
+              p(class="news-source-name")=name
+              hr
+              p(class="news-title")
+                |Bitcoin has 3 flaws — and that could set the stage for other alternatives
+              hr
+              p(class="news-description")
+                |The Twitter Hack. On 15th July 2020, a number of high-profile Twitter accounts were
+                |hacked. Around 130...
+              a(href="")
+              hr
+              p(class="news-date")
+                |publicado hace 1 h
+
+
+doctype html
+html
+  head 
+    meta(charser="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;1,100;1,200;1,300&display=swap",
+    rel="stylesheet")
+    link(rel="shortcut icon", type="image/png", href='./favicon.png')
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet", href="./styles/mobile.css")
+    link(rel="stylesheet", href="./styles/tablet.css", media="(min-width: 900px)")
+    link(rel="stylesheet" href="./styles/desktop.css" media="(min-width: 1300px)")
+    title Google News API | Pablo Cabrera
+  div(id="loading")
+  body
+    header
+      h1 Google News API Demo App
+    div(class="button-container")
+      div
+        p(class="button-text")|Update list
+        button(type="button", class="button-padding", id="btn-reload")
+          span(class="material-icons")|refresh
+      div
+        p(class="button-text")|Add 1 news
+        button(type="button", class="button-padding", id="btn-add")
+          span(class="material-icons")|add
+    main
+      section(class="news")
+        article(class="news-container", id="news-container")
+          +news("https://image.cnbcfm.com/api/v1/image/106887563-1621887067804-gettyimages-843200050-UK_BITCOINS.jpeg?v=1623083222", "Cyber.uk")
+          +news("https://image.cnbcfm.com/api/v1/image/106887563-1621887067804-gettyimages-843200050-UK_BITCOINS.jpeg?v=1623083222", "Cyber.uk")
+          +news("https://image.cnbcfm.com/api/v1/image/106887563-1621887067804-gettyimages-843200050-UK_BITCOINS.jpeg?v=1623083222", "Cyber.uk")
+    footer
+      p(class="dipa")
+        |Made With love by Pablo Cabrera
+  script(type="module", src="./main.js")

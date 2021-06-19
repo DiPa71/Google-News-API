@@ -1,0 +1,133 @@
+$primary: #2a2a72;
+$secondary: #009ffd;
+$degradate: 315deg, $primary 0%, $secondary 74%;
+.news{
+  margin: 1rem 0;
+  min-width: 320px;
+  position: relative;
+  &-card{
+    margin-top: 5rem;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 5px 15px rgba(51, 51, 51, 0.5);
+    transition: .5s;
+  }
+  &-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 10px 15px rgba(51, 51, 51, 0.5);
+  }
+  &-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    img{
+      width: 50%;
+      margin-bottom: -1rem;
+      border-radius: 2rem 2rem 2rem 2rem;
+      box-shadow: 0px 10px 15px rgba(51, 51, 51, 0.5);
+    }
+  }
+  
+  &_text-container{
+    width: 50%;
+    padding: 4rem;
+  }
+
+  &-source-name{
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    font-weight: 400;
+  }
+  
+  &-title{
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 1000;
+  }
+  &-description{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 2rem;
+    }
+  &-date{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    float: right;
+    color: rgb(170, 170, 170);
+  }
+
+}
+.button{
+  span{
+    animation: giro .8s ease infinite;
+    display: flex;
+    justify-content: center;
+  }
+  &-container{
+    margin: 1rem auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.dipa{
+  position: absolute;
+  left: 0;
+  color: white;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.view-more{
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.load-b {
+  border: .5rem solid rgba(0, 0, 0, 0.2);
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border-left-color: $secondary;
+  animation: spin .8s ease infinite;
+  float: inline-end;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 70rem;
+}
+#loading{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
